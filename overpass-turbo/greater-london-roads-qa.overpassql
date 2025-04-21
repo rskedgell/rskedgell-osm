@@ -46,6 +46,17 @@ way.roads
 	[highway]
   	[psv]
   	[!"source:psv"];
+
+// access=bus is undefined, probably bus=yes
+way.roads
+	[highway]
+  	[access=bus];
+
+// bus=access is undefined, probably bus=destination
+way.roads
+	[highway]
+  	[bus=access];
+
 );
 
 (._;>;);
