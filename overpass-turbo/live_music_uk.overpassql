@@ -26,6 +26,11 @@ area["name"="United Kingdom"][admin_level=2]->.uk;
   	[amenity=arts_centre]
   	[live_music=yes]
   	(area.uk);
+
+  nwr
+  	[amenity=events_venue]
+  	[live_music=yes]
+  	(area.uk);
 );
 
 (._;>;);
