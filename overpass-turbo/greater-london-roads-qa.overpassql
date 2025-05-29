@@ -90,10 +90,10 @@ way.roads
 //  	["crossing:markings"=yes];
 
 // deprecated crossing=zebra
-node.crossing_nodes
-  	[crossing=zebra];
-way.crossing_ways
-	[crossing=zebra];
+//node.crossing_nodes
+//  	[crossing=zebra];
+//way.crossing_ways
+//	[crossing=zebra];
 
 // incorrect crossing:markings=dashes
 node.crossing_nodes
