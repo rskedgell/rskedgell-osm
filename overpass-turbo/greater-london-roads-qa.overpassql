@@ -68,11 +68,11 @@ way
 ) -> .crossing_ways;
   
 (
-// PSV restrictions are unlikely in the UK, should be:
-// bus=* | bus=* + taxi=*
+// Designated PSV access is unlikely in the UK although restrictions exist,
+// should be bus=* | bus=* + taxi=*
 way.roads
 	[highway]
-  	[psv]
+  	[psv~"^(yes|designated)$"]
   	[!"source:psv"];
 
 // access=bus is undefined, probably bus=yes
