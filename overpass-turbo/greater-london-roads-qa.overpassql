@@ -68,12 +68,26 @@ way
 ) -> .crossing_ways;
   
 (
+
+// maxweight=* is usually wrong, should be maxweightrating=* or maxweightrating:hgv=*
+way.roads
+	[highway]
+  	[maxweight]
+  	[!"source:maxweight"];
+
 // Designated PSV access is unlikely in the UK although restrictions exist,
 // should be bus=* | bus=* + taxi=*
 way.roads
 	[highway]
   	[psv~"^(yes|designated)$"]
   	[!"source:psv"];
+
+// motor_vehicle=designated usually an error or redundant
+// should be bus=* | bus=* + taxi=*
+way.roads
+	[highway]
+  	[motor_vehicle=designated]
+  	[!"source:motor_vehicle"];
 
 // access=bus is undefined, probably bus=yes
 way.roads
