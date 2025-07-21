@@ -117,6 +117,14 @@ node.crossing_nodes
 way.crossing_ways
 	[tactile_paving];
 
+// fixme
+way.roads
+	[fixme];
+node.crossing_nodes
+	[fixme];
+way.crossing_ways
+	[fixme];
+
 );
 
 (._;>;);
