@@ -125,6 +125,13 @@ way.crossing_ways
 	[bicycle~"^(yes|designated)$"]
 	[crossing_ref~"^(pelican|puffin)$"];
 
+// unusual speed limits for public highways
+way.roads
+  [maxspeed]
+  [maxspeed!~"^(20|30|40|50|60|70) mph$"]
+  [!"source:maxspeed"]
+  [!"maxspeed:type"];
+ 
 // fixme
 node.crossing_nodes
 	[fixme];
