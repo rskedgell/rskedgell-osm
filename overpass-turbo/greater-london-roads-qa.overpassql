@@ -25,6 +25,7 @@ way
 (
   way
   	[highway~"^(unclassified|residential|living_street)$"]
+	[access!=private]
 	[ownership!=private]
 	["operator:type"!=private]
   	(area.gla);
@@ -32,6 +33,7 @@ way
   way
   	[highway~"^(pedestrian|service)$"]
 	[area!=yes]
+	[access!=private]
 	[ownership!=private]
 	["operator:type"!=private]
   	(area.gla);
