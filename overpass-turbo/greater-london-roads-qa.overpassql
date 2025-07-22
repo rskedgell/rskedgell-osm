@@ -76,6 +76,14 @@ way.roads
 	[highway]
   	[maxweight]
   	[!"source:maxweight"];
+  
+// hgv=* other than hgv=discouraged is often a misinterpretation
+// of TSRGD 622.1A HGV weight restriction signs
+way.roads
+	[highway]
+  	[hgv]
+	[hgv!=discouraged]
+  	[!"source:hgv"];
 
 // Designated PSV access is unlikely in the UK although restrictions exist,
 // should be bus=* | bus=* + taxi=*
@@ -118,7 +126,7 @@ node.crossing_nodes
 // incorrect tactile_paving on crossing way
 way.crossing_ways
 	[tactile_paving];
-
+  
 // crossings with bicycle allowed and incomptible crossing_ref
 node.crossing_nodes
 	[bicycle~"^(yes|designated)$"]
@@ -129,12 +137,12 @@ way.crossing_ways
 
 // unusual speed limits for public highways
 way.roads
-	[highway!=service]
-	[maxspeed]
-	[maxspeed!~"^(20|30|40|50|60|70) mph$"]
-	[!"source:maxspeed"]
-	[!"maxspeed:type"];
- 
+  [highway!=service]
+  [maxspeed]
+  [maxspeed!~"^(20|30|40|50|60|70) mph$"]
+  [!"source:maxspeed"]
+  [!"maxspeed:type"];
+  
 // fixme
 node.crossing_nodes
 	[fixme];
