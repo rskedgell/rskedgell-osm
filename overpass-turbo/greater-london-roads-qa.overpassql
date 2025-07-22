@@ -129,10 +129,11 @@ way.crossing_ways
 
 // unusual speed limits for public highways
 way.roads
-  [maxspeed]
-  [maxspeed!~"^(20|30|40|50|60|70) mph$"]
-  [!"source:maxspeed"]
-  [!"maxspeed:type"];
+	[highway!=service]
+	[maxspeed]
+	[maxspeed!~"^(20|30|40|50|60|70) mph$"]
+	[!"source:maxspeed"]
+	[!"maxspeed:type"];
  
 // fixme
 node.crossing_nodes
