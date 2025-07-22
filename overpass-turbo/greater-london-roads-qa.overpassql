@@ -117,13 +117,21 @@ node.crossing_nodes
 way.crossing_ways
 	[tactile_paving];
 
+// crossings with bicycle allowed and incomptible crossing_ref
+node.crossing_nodes
+	[bicycle~"^(yes|designated)$"]
+	[crossing_ref~"^(pelican|puffin)$"];
+way.crossing_ways
+	[bicycle~"^(yes|designated)$"]
+	[crossing_ref~"^(pelican|puffin)$"];
+
 // fixme
-way.roads
-	[fixme];
 node.crossing_nodes
 	[fixme];
 way.crossing_ways
 	[fixme];
+//way.roads
+//	[fixme];
 
 );
 
