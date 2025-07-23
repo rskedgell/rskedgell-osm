@@ -4,33 +4,33 @@ area["name"="Greater London"][admin_level=5]->.gla;
 // TLRN "trunk" roads, plus A and B roads
 (
 way
-  [highway~"^(trunk|primary|secondary)(_link)?$"]
-  (area.gla);
+	[highway~"^(trunk|primary|secondary)(_link)?$"]
+	(area.gla);
 ) -> .classified_roads;
 
 // tertiary roads and busways
 (
 way
-  [highway~"^tertiary(_link)?$"]
-  (area.gla);
+	[highway~"^tertiary(_link)?$"]
+	(area.gla);
 
 way
-  [highway=busway]
-  (area.gla);
+	[highway=busway]
+	(area.gla);
 ) -> .other_main_roads;
 
 (.classified_roads; .other_main_roads; ) -> .main_roads;
 
 // public minor roads
 (
-  way
+way
   	[highway~"^(unclassified|residential|living_street)$"]
 	[access!=private]
 	[ownership!=private]
 	["operator:type"!=private]
   	(area.gla);
 
-  way
+way
   	[highway~"^(pedestrian|service)$"]
 	[area!=yes]
 	[access!=private]
@@ -43,12 +43,12 @@ way
 
 // footways and cycleways tagged as crossings
 (
-  way
+way
   	[highway=footway]
   	[footway=crossing]
   	(area.gla);
 
-  way
+way
   	[highway=cycleway]
   	[cycleway=crossing]
   	(area.gla);
@@ -56,7 +56,7 @@ way
 
 // crossing nodes where crossing ways intersect public roads
 (
-  node
+node
   	[highway=crossing]
   	(w.roads)
   	(w.all_crossing_ways);
@@ -64,7 +64,7 @@ way
 
 // crossing ways intersecting public roads
 (
-  way
+way
   	[crossing]
   	(bn.crossing_nodes);
 ) -> .crossing_ways;
@@ -137,11 +137,12 @@ way.crossing_ways
 
 // unusual speed limits for public highways
 way.roads
-  [highway!=service]
-  [maxspeed]
-  [maxspeed!~"^(20|30|40|50|60|70) mph$"]
-  [!"source:maxspeed"]
-  [!"maxspeed:type"];
+	[highway!=pedestrian]
+	[highway!=service]
+	[maxspeed]
+	[maxspeed!~"^(20|30|40|50|60|70) mph$"]
+	[!"source:maxspeed"]
+	[!"maxspeed:type"];
   
 // fixme
 node.crossing_nodes
