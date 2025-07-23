@@ -119,9 +119,11 @@ way.roads
 //way.crossing_ways
 //	[crossing=zebra];
 
-// incorrect crossing:markings=dashes
+// incorrect crossing:markings=dashes on pedestrian (only) crossings
 node.crossing_nodes
-  	["crossing:markings"=dashes];
+  	["crossing:markings"=dashes]
+	[bicycle!=designated]
+	[bicycle!=yes];
 
 // incorrect tactile_paving on crossing way
 way.crossing_ways
