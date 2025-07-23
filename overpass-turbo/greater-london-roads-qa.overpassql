@@ -145,6 +145,10 @@ way.roads
 	[maxspeed!~"^(20|30|40|50|60|70) mph$"]
 	[!"source:maxspeed"]
 	[!"maxspeed:type"];
+
+// there's no such thing as a compulsory footpath on UK public highways
+way.roads
+	[foot=use_sidepath];
   
 // fixme
 node.crossing_nodes
