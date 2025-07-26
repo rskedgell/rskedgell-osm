@@ -77,13 +77,21 @@ way.roads
   	[maxweight]
   	[!"source:maxweight"];
   
+// hgv=designated used on the London Lorry Control Scheme (LLCS)
+// Excluded Route Network (ERN)
+way.main_roads
+	[highway]
+	[hgv]
+	[hgv!=designated]
+	[!"source:hgv"];
+
 // hgv=* other than hgv=discouraged is often a misinterpretation
 // of TSRGD 622.1A HGV weight restriction signs
-way.roads
+way.minor_roads
 	[highway]
-  	[hgv]
+	[hgv]
 	[hgv!=discouraged]
-  	[!"source:hgv"];
+	[!"source:hgv"];
 
 // Designated PSV access is unlikely in the UK although restrictions exist,
 // should be bus=* | bus=* + taxi=*
