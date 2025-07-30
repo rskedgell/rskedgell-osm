@@ -73,20 +73,17 @@ way
 
 // maxweight=* is usually wrong, should be maxweightrating=* or maxweightrating:hgv=*
 way.roads
-	[highway]
   	[maxweight]
   	[!"source:maxweight"];
 
 // Obsolete tags from the abandoned 2013 Gross Weight proposal
 // https://wiki.openstreetmap.org/wiki/Proposal:Gross_weight
 way.roads
-	[highway]
 	[~"^max(actual|gc)weight.*$"~".*"];
 
 // hgv=designated used on the London Lorry Control Scheme (LLCS)
 // Excluded Route Network (ERN)
 way.main_roads
-	[highway]
 	[hgv]
 	[hgv!=designated]
 	[!"source:hgv"];
@@ -94,7 +91,6 @@ way.main_roads
 // hgv=* other than hgv=discouraged is often a misinterpretation
 // of TSRGD 622.1A HGV weight restriction signs
 way.minor_roads
-	[highway]
 	[hgv]
 	[hgv!=discouraged]
 	[!"source:hgv"];
@@ -102,25 +98,21 @@ way.minor_roads
 // Designated PSV access is unlikely in the UK although restrictions exist,
 // should be bus=* | bus=* + taxi=*
 way.roads
-	[highway]
   	[psv~"^(yes|designated)$"]
   	[!"source:psv"];
 
 // motor_vehicle=designated usually an error or redundant
 // should be bus=* | bus=* + taxi=*
 way.roads
-	[highway]
   	[motor_vehicle=designated]
   	[!"source:motor_vehicle"];
 
 // access=bus is undefined, probably bus=yes
 way.roads
-	[highway]
   	[access=bus];
 
 // bus=access is undefined, probably bus=destination
 way.roads
-	[highway]
   	[bus=access];
 
 // useless crossing:markings=yes
