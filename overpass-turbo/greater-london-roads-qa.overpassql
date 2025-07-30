@@ -76,7 +76,13 @@ way.roads
 	[highway]
   	[maxweight]
   	[!"source:maxweight"];
-  
+
+// Obsolete tags from the abandoned 2013 Gross Weight proposal
+// https://wiki.openstreetmap.org/wiki/Proposal:Gross_weight
+way.roads
+	[highway]
+	[~"^max(actual|gc)weight.*$"~".*"];
+
 // hgv=designated used on the London Lorry Control Scheme (LLCS)
 // Excluded Route Network (ERN)
 way.main_roads
