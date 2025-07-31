@@ -134,7 +134,11 @@ node.crossing_nodes
 // incorrect tactile_paving on crossing way
 way.crossing_ways
 	[tactile_paving];
-  
+
+// crossing tags which are meaningless on crossing ways
+way.crossing_ways
+	[button_operated];
+
 // crossings with bicycle allowed and incomptible crossing_ref
 node.crossing_nodes
 	[bicycle~"^(yes|designated)$"]
