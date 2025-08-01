@@ -76,6 +76,13 @@ way.roads
   	[maxweight]
   	[!"source:maxweight"];
 
+// also check for maxweight:hgv and maxweight:goods, which
+// should also be maxweightrating:* (and goods applies ≤ 3.5t)
+way.roads
+	["maxweight:hgv"];
+way.roads
+	["maxweight:goods"];
+
 // Obsolete tags from the abandoned 2013 Gross Weight proposal
 // https://wiki.openstreetmap.org/wiki/Proposal:Gross_weight
 way.roads
