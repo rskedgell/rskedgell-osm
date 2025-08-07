@@ -72,16 +72,11 @@ way
 (
 
 // maxweight=* is usually wrong, should be maxweightrating=* or maxweightrating:hgv=*
-way.roads
-  	[maxweight]
-  	[!"source:maxweight"];
-
 // also check for maxweight:hgv and maxweight:goods, which
 // should also be maxweightrating:* (and goods applies ≤ 3.5t)
 way.roads
-	["maxweight:hgv"];
-way.roads
-	["maxweight:goods"];
+	[~"^maxweight(:goods|:hgv)?(:backward|:forward)?$"~".*"]
+	[!"source:maxweight"];
 
 // Obsolete tags from the abandoned 2013 Gross Weight proposal
 // https://wiki.openstreetmap.org/wiki/Proposal:Gross_weight
@@ -91,22 +86,42 @@ way.roads
 // hgv=designated used on the London Lorry Control Scheme (LLCS)
 // Excluded Route Network (ERN)
 way.main_roads
-	[hgv]
-	[hgv!=designated]
+	["hgv"]
+	["hgv"!="designated"]
+	[!"source:hgv"];
+
+way.main_roads
+	["hgv:forward"]
+	["hgv:forward"!="designated"]
+	[!"source:hgv"];
+
+way.main_roads
+	["hgv:backward"]
+	["hgv:backward"!="designated"]
 	[!"source:hgv"];
 
 // hgv=* other than hgv=discouraged is often a misinterpretation
 // of TSRGD 622.1A HGV weight restriction signs
 way.minor_roads
-	[hgv]
-	[hgv!=discouraged]
+	["hgv"]
+	["hgv"!="discouraged"]
+	[!"source:hgv"];
+
+way.minor_roads
+	["hgv:forward"]
+	["hgv:forward"!="discouraged"]
+	[!"source:hgv"];
+
+way.minor_roads
+	["hgv:backward"]
+	["hgv:backward"!="discouraged"]
 	[!"source:hgv"];
 
 // Designated PSV access is unlikely in the UK although restrictions exist,
 // should be bus=* | bus=* + taxi=*
 way.roads
-	[~"^psv(:backward|:forward)$"~"^(yes|designated)$"]
-  	[!"source:psv"];
+	[~"^psv(:backward|:forward)?$"~"^(yes|designated)$"]
+	[!"source:psv"];
 
 // motor_vehicle=designated usually an error or redundant
 // should be bus=* | bus=* + taxi=*
