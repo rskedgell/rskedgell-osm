@@ -1,22 +1,22 @@
 // Roads QA for public roads in Greater London
-area["name"="Greater London"][admin_level=5]->.gla;
+area["name"="Greater London"][admin_level=5]->.search;
 
 // TLRN "trunk" roads, plus A and B roads
 (
 way
 	[highway~"^(trunk|primary|secondary)(_link)?$"]
-	(area.gla);
+	(area.search);
 ) -> .classified_roads;
 
 // tertiary roads and busways
 (
 way
 	[highway~"^tertiary(_link)?$"]
-	(area.gla);
+	(area.search);
 
 way
 	[highway=busway]
-	(area.gla);
+	(area.search);
 ) -> .other_main_roads;
 
 (.classified_roads; .other_main_roads; ) -> .main_roads;
@@ -28,7 +28,7 @@ way
 	[access!=private]
 	[ownership!=private]
 	["operator:type"!=private]
-  	(area.gla);
+  	(area.search);
 
 way
   	[highway~"^(pedestrian|service)$"]
@@ -36,7 +36,7 @@ way
 	[access!=private]
 	[ownership!=private]
 	["operator:type"!=private]
-  	(area.gla);
+  	(area.search);
 ) -> .minor_roads;
 
 (.main_roads; .minor_roads;) -> .roads;
@@ -46,12 +46,12 @@ way
 way
   	[highway=footway]
   	[footway=crossing]
-  	(area.gla);
+  	(area.search);
 
 way
   	[highway=cycleway]
   	[cycleway=crossing]
-  	(area.gla);
+  	(area.search);
 ) -> .all_crossing_ways;
 
 // crossing nodes where crossing ways intersect public roads
