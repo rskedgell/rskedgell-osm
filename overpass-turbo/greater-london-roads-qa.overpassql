@@ -105,7 +105,7 @@ way.minor_roads
 // Designated PSV access is unlikely in the UK although restrictions exist,
 // should be bus=* | bus=* + taxi=*
 way.roads
-  	[psv~"^(yes|designated)$"]
+	[~"^psv(:backward|:forward)$"~"^(yes|designated)$"]
   	[!"source:psv"];
 
 // motor_vehicle=designated usually an error or redundant
