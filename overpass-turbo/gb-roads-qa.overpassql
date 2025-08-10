@@ -196,6 +196,32 @@ way.roads
 	[foot=no]
 	[sidewalk~"^(both|left|right)$"];
 
+// unusual or less specific values of sidewalk=*
+way.roads
+	["sidewalk"]
+	["sidewalk"!="both"]
+	["sidewalk"!="lane"]
+	["sidewalk"!="left"]
+	["sidewalk"!="no"]
+	["sidewalk"!="right"];
+way.roads
+	["sidewalk:both"]
+	["sidewalk:both"!="lane"]
+	["sidewalk:both"!="no"]
+	["sidewalk:both"!="separate"];
+way.roads
+	["sidewalk:left"]
+	["sidewalk:left"!="lane"]
+	["sidewalk:left"!="no"]
+	["sidewalk:left"!="separate"]
+	["sidewalk:left"!="yes"];
+way.roads
+	["sidewalk:right"]
+	["sidewalk:right"!="lane"]
+	["sidewalk:right"!="no"]
+	["sidewalk:right"!="separate"]
+	["sidewalk:right"!="yes"];
+
 // fixme
 node.crossing_nodes
 	[fixme];
