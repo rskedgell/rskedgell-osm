@@ -181,7 +181,21 @@ way.roads
 // there's no such thing as a compulsory footpath on UK public highways
 way.roads
 	[foot=use_sidepath];
-  
+
+// pedestrian prohibitions are quite rare and must be signed
+way.roads
+	[foot=no]
+	[motorroad!=yes]
+	[expressway!=yes]
+	[!tunnel]
+	[tunnel!=building_passage]
+	[!"source:foot"];
+
+// pedestrian prohbition usually incompatible with sidewalk=$side
+way.roads
+	[foot=no]
+	[sidewalk~"^(both|left|right)$"];
+
 // fixme
 node.crossing_nodes
 	[fixme];
