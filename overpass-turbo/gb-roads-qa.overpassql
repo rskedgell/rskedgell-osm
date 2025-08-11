@@ -125,9 +125,14 @@ way.roads
 
 // motor_vehicle=designated usually an error or redundant
 // should be bus=* | bus=* + taxi=*
+// redundant use or trunk/expressway/motorroad ignored
 way.roads
-  	[motor_vehicle=designated]
-  	[!"source:motor_vehicle"];
+	[motor_vehicle=designated]
+	[highway!=trunk]
+	[highway!=trunk_link]
+	[expressway!=yes]
+	[motorroad!=yes]
+	[!"source:motor_vehicle"];
 
 // access=bus is undefined, probably bus=yes
 way.roads
