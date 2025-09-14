@@ -227,6 +227,22 @@ way.roads
 	["sidewalk:right"!="separate"]
 	["sidewalk:right"!="yes"];
 
+// cycleway=share_busway without bus:lanes=* and bicycle:lanes=*
+way.roads
+	[~"^cycleway(:both)?$"~"^share_busway$"]
+	[!"bus:lanes:forward"]
+	[!"bicycle:lanes:forward"]
+	[!"bus:lanes:backward"]
+	[!"bicycle:lanes:backward"];
+way.roads
+	["cycleway:left"="share_busway"]
+	[!"bus:lanes:forward"]
+	[!"bicycle:lanes:forward"];
+way.roads
+	["cycleway:right"="share_busway"]
+	[!"bus:lanes:backward"]
+	[!"bicycle:lanes:backward"];
+
 // fixme
 node.crossing_nodes
 	[fixme];
