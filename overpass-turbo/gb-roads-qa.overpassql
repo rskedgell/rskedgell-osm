@@ -236,13 +236,27 @@ way.roads
 	[!"bus:lanes:backward"]
 	[!"bicycle:lanes:backward"];
 way.roads
-	["cycleway:left"="share_busway"]
+	[~"^cycleway(:both)?:conditional$"~"^share_busway @ .*$"]
+	[!"bus:lanes:forward:conditional"]
+	[!"bicycle:lanes:forward:conditional"]
+	[!"bus:lanes:backward:conditional"]
+	[!"bicycle:lanes:backward:conditional"];
+way.roads
+	["cycleway:left"~"^share_busway$"]
 	[!"bus:lanes:forward"]
 	[!"bicycle:lanes:forward"];
 way.roads
-	["cycleway:right"="share_busway"]
+	["^cycleway:left:conditional"~"^share_busway @ .*$"]
+	[!"bus:lanes:forward:conditional"]
+	[!"bicycle:lanes:forward:conditional"];
+way.roads
+	["cycleway:right"~"^share_busway$"]
 	[!"bus:lanes:backward"]
 	[!"bicycle:lanes:backward"];
+way.roads
+	["cycleway:right:conditional"~"^share_busway @ .*$"]
+	[!"bus:lanes:backward:conditional"]
+	[!"bicycle:lanes:backward:conditional"];
 
 // fixme
 node.crossing_nodes
