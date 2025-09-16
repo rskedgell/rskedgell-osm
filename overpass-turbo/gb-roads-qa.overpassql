@@ -213,7 +213,8 @@ way.roads
 	["sidewalk:both"]
 	["sidewalk:both"!="lane"]
 	["sidewalk:both"!="no"]
-	["sidewalk:both"!="separate"];
+	["sidewalk:both"!="separate"]
+	["sidewalk:both"!="yes"];
 way.roads
 	["sidewalk:left"]
 	["sidewalk:left"!="lane"]
