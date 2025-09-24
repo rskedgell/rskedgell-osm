@@ -71,6 +71,11 @@ way
   
 (
 
+// main roads should be tagged with lanes/lane_markings
+way.classified_roads
+	[!lanes]
+	[lane_markings!=no];
+
 // maxweight=* is usually wrong, should be maxweightrating=* or maxweightrating:hgv=*
 // also check for maxweight:hgv and maxweight:goods, which
 // should also be maxweightrating:* (and goods applies ≤ 3.5t)
