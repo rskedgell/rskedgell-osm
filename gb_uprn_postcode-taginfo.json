@@ -1,0 +1,16 @@
+{
+    "data_format": 1,
+    "data_url": "https://raw.githubusercontent.com/rskedgell/rskedgell-osm/main/gb_uprn_postcode-taginfo.json",
+    "project": {
+        "name": "Import of UK postcodes and UPRNs (England & Wales)",
+        "description": "Using Land Registry INSPIRE polygons, OS Open UPRN and ONS UPRN Directory (ONSUD) to add UPRNs and postcodes to buildings in England and Wales",
+        "project_url": "https://wiki.openstreetmap.org/wiki/Import_of_UK_postcodes_and_UPRNs_(England_%26_Wales)",
+        "doc_url": "https://wiki.openstreetmap.org/wiki/Import_of_UK_postcodes_and_UPRNs_(England_%26_Wales)",
+        "contact_name": "Robert Skedgell",
+        "contact_email": "rskedgell_osm@hubris.org.uk"
+    },
+    "tags": [
+        { "key": "addr:postcode", "object_types": [ "area" ] },
+        { "key": "ref:GB:uprn", "object_types": [ "area" ] }
+    ]
+}   
