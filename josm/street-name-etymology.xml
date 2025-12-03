@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<presets xmlns="http://josm.openstreetmap.de/tagging-preset-1.0"
+    author="Robert Skedgell"
+    version="2025-12-03"
+    description="Common name etymologies for streets, grouped by theme"
+    shortdescription="Street name etymology">
+    <group name="Annotation">
+        <group name="Street name themes">
+            <group name="Painters">
+                <item name="Cotman" type="way">
+                    <key key="name:etymology" value="John Sell Cotman" />
+                    <key key="name:etymology:wikidata" value="Q1288248" />
+                </item>
+                <item name="Frith" type="way">
+                    <key key="name:etymology" value="William Powell Frith" />
+                    <key key="name:etymology:wikidata" value="Q955750" />
+                </item>
+                <item name="Gainsborough" type="way">
+                    <key key="name:etymology" value="Thomas Gainsborough" />
+                    <key key="name:etymology:wikidata" value="Q192720" />
+                </item>
+                <item name="Hogarth" type="way">
+                    <key key="name:etymology" value="William Hogarth" />
+                    <key key="name:etymology:wikidata" value="Q171344" />
+                </item>
+                <item name="Knapton" type="way">
+                    <key key="name:etymology" value="George Knapton" />
+                    <key key="name:etymology:wikidata" value="Q5541385" />
+                </item>
+                <item name="Landseer" type="way">
+                    <key key="name:etymology" value="Edwin Landseer" />
+                    <key key="name:etymology:wikidata" value="Q328369" />
+                </item>
+                <item name="Millais" type="way">
+                    <key key="name:etymology" value="John Everett Millais" />
+                    <key key="name:etymology:wikidata" value="Q159606" />
+                </item>
+                <item name="Morland" type="way">
+                    <key key="name:etymology" value="George Morland" />
+                    <key key="name:etymology:wikidata" value="Q2405427" />
+                </item>
+                <item name="Munnings" type="way">
+                    <key key="name:etymology" value="Alfred Munnings" />
+                    <key key="name:etymology:wikidata" value="Q940445" />
+                </item>
+                <item name="Reynolds" type="way">
+                    <key key="name:etymology" value="Joshua Reynolds" />
+                    <key key="name:etymology:wikidata" value="Q194402" />
+                </item>
+                <item name="Romney" type="way">
+                    <key key="name:etymology" value="George Romney" />
+                    <key key="name:etymology:wikidata" value="Q371280" />
+                </item>
+                <item name="Sisley" type="way">
+                    <key key="name:etymology" value="Alfred Sisley" />
+                    <key key="name:etymology:wikidata" value="Q175130" />
+                </item>
+                <item name="Turner" type="way">
+                    <key key="name:etymology" value="J. M. W. Turner" />
+                    <key key="name:etymology:wikidata" value="Q159758" />
+                </item>
+            </group>
+            <group name="Poets">
+                <item name="Burns" type="way">
+                    <key key="name:etymology" value="Robert Burns" />
+                    <key key="name:etymology:wikidata" value="Q81960" />
+                </item>
+                <item name="Coleridge" type="way">
+                    <key key="name:etymology" value="Samuel Taylor Coleridge" />
+                    <key key="name:etymology:wikidata" value="Q82409" />
+                </item>
+                <item name="Shakespeare" type="way">
+                    <key key="name:etymology" value="William Shakespeare" />
+                    <key key="name:etymology:wikidata" value="Q692" />
+                </item>
+                <item name="Shelley" type="way">
+                    <key key="name:etymology" value="Percy Bysshe Shelley" />
+                    <key key="name:etymology:wikidata" value="Q93343" />
+                </item>
+                <item name="Tennyson" type="way">
+                    <key key="name:etymology" value="Alfred Tennyson" />
+                    <key key="name:etymology:wikidata" value="Q173869" />
+                </item>
+                <item name="Wordsworth" type="way">
+                    <key key="name:etymology" value="William Wordsworth" />
+                    <key key="name:etymology:wikidata" value="Q45546" />
+                </item>
+            </group>
+        </group>
+    </group>
+</presets>
