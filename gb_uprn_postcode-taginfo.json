@@ -10,7 +10,7 @@
         "contact_email": "rskedgell_osm@hubris.org.uk"
     },
     "tags": [
-        { "key": "addr:postcode", "object_types": [ "area" ] },
-        { "key": "ref:GB:uprn", "object_types": [ "area" ] }
+        { "key": "addr:postcode", "object_types": [ "area" ], "description": "Imported from ONS UPRN Directory (ONSUD)" },
+        { "key": "ref:GB:uprn", "object_types": [ "area" ], "description": "Imported from OS Open UPRN" }
     ]
 }   
